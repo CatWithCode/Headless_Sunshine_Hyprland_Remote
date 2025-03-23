@@ -16,7 +16,7 @@ if [ $# -eq 1 ]; then # END REMOTE:
     #bash  ~/.config/hypr/Scripts/GameMode/WayBarMaker.sh & disown
 
     # ReRun SleepService:
-    bash ~/.config/hypr/Scripts/IDEL.sh &> /dev/null & disown %-
+    bash ~/.config/hypr/Scripts/IDLE.sh &> /dev/null & disown %-
     
     # Lock Screen (Only after unlocking Sunshine will close. I could no fix the Disown issue. This also closes swayidle and other executed scripts that still run.):
     sleep 1

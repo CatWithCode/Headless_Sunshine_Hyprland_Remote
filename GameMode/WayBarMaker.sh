@@ -10,7 +10,7 @@ sleep 1
 waybar &
 disown
 
-killall swayidel
+killall swayidle
 bash ~/.config/hypr/Scripts/IDEL.sh &> /dev/null & disown %-
 
 sleep 1

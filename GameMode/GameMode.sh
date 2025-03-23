@@ -4,7 +4,6 @@
 if pgrep -x "sunshine" > /dev/null; then # IS RUNNING:
     echo "The sunshine process is running."
 else # IS NOT RUNNING
-
     # Current State:
     HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==2{print $2}')
 
