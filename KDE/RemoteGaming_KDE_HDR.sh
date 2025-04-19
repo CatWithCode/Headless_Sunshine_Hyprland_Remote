@@ -7,13 +7,14 @@ if [ $# -eq 1 ]; then # END REMOTE:
     echo "EXIT REMOTE NOW"
     
     # Enable Real Displays (Your values here):
-    kscreen-doctor output.HDMI-A-1.enable
-    sleep 4
-    kscreen-doctor output.HDMI-A-1.position.0,0
-    sleep 4
+    # Main first
     kscreen-doctor output.DP-1.enable
     sleep 4
     kscreen-doctor output.DP-1.position.1080,50
+    sleep 4
+    kscreen-doctor output.HDMI-A-1.enable
+    sleep 4
+    kscreen-doctor output.HDMI-A-1.position.0,0
     sleep 4
     kscreen-doctor output.DP-3.enable
     sleep 4
