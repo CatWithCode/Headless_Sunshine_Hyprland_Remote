@@ -3,10 +3,11 @@
 # Script to use old iMacs as an overly complicated display:
 
 # Delay to wait for the main PC:
-sleep 10
+#sleep 10
 
 # Remote PC:
-TARGET_IP="IP_OF_PC"
+TARGET_IP="192.168.178.92"
+PROFILE="Desktop_EXTEND"
 
 # Retries:
 MAX_RETRIES=3
@@ -33,9 +34,9 @@ while true; do
 		sleep 10
 	else # FOUND PC:
 		# Check for profile:
-		if echo "$output" | grep -q "EXTEND"; then
+		if echo "$output" | grep -q "$PROFILE"; then
 			# Start Remote:
-			moonlight "$TARGET_IP" Remote
+			moonlight stream "$TARGET_IP" "$PROFILE"
 
 			# Done with Monitor use. Exit:
 			systemctl poweroff
